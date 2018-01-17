@@ -1,0 +1,22 @@
+{
+  "name": "purescript-graphviz",
+  "version": "1.0.0",
+  "description": "graphviz rendering for purescript",
+  "main": "src/Graphviz.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "pulp test"
+  },
+  "keywords": [
+    "purescript",
+    "graphviz",
+    "viz.js"
+  ],
+  "author": "csicar",
+  "license": "MIT",
+  "dependencies": {
+    "viz.js": "^1.8.0"
+  }
+}
