@@ -2,16 +2,13 @@ module Test.Main where
 
 import Prelude
 import Color.Scheme.MaterialDesign (red)
-import Control.Monad.Eff (Eff)
-import Control.Monad.Eff.AVar (AVAR)
-import Control.Monad.Aff.Console (CONSOLE)
 import Data.DotLang (Attr(..), Definition(..), FillStyle(..), Graph(..), ShapeType(..), node, (==>))
+import Effect (Effect)
 import Graphics.Graphviz (Engine(..), renderToSvg)
 import Test.Unit (suite, test)
 import Node.FS.Aff (writeTextFile)
 import Node.Encoding (Encoding(..))
 import Test.Unit.Assert (equal)
-import Test.Unit.Console (TESTOUTPUT)
 import Test.Unit.Main (runTest)
 
 main = runTest do
