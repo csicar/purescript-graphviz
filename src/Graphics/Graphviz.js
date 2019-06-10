@@ -2,9 +2,10 @@
 
 exports.viz_internal = function(data, format, engine, scale) {
   var v = undefined;
-  if (typeof window === "undefined") {
+  try {
     v = require('viz.js');
-  } else {
+  }
+  catch(error) {
     v = Viz;
   }
   return v(data, {format: format, engine: engine, scale: scale})
