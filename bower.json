@@ -14,7 +14,7 @@
   "dependencies": {
     "purescript-prelude": "^4.1.1",
     "purescript-console": "^4.2.0",
-    "purescript-dotlang": "^1.2.0",
+    "purescript-dotlang": "^2.0.0",
     "viz.js": "^1.8.0",
     "purescript-functions": "^4.0.0"
   },

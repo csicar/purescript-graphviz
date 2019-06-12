@@ -3,7 +3,7 @@ module Test.Main where
 import Prelude
 
 import Color.Scheme.MaterialDesign (red)
-import Data.DotLang (Definition(..), EdgeType(..), Graph(..), edge, node, (==>))
+import Data.DotLang (Definition(..), Graph(..), node, (==>), (=*>))
 import Data.DotLang.Attr (FillStyle(..))
 import Data.DotLang.Attr.Edge as Edge
 import Data.DotLang.Attr.Node (Attr(..), ShapeType(..))
@@ -14,7 +14,9 @@ import Node.FS.Aff (writeTextFile)
 import Test.Unit (suite, test)
 import Test.Unit.Assert (equal)
 import Test.Unit.Main (runTest)
+import Effect (Effect)
 
+main ∷ Effect Unit
 main = runTest do
   suite "Graphviz" do
     test "simple" do
@@ -22,7 +24,7 @@ main = runTest do
             node "a" [ Shape Diamond, Style Filled, Node.FillColor red ],
             node "b" [],
             "a" ==> "b",
-            edge Forward "a" "d" [ Edge.Color red, Edge.PenWidth 3.0 ],
+            "a" =*> "d" $ [ Edge.Color red, Edge.PenWidth 3.0 ],
             Subgraph [
               node "d" []
             ]
