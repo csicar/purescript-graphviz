@@ -1,6 +1,7 @@
 module Graphics.Graphviz (renderToJson, renderToSvg, renderReprSvg, Engine(..)) where
 
-import Data.DotLang (class DotLang, class GraphRepr, toGraph, toText)
+import Data.DotLang (class GraphRepr, toGraph)
+import Data.DotLang.Class (class DotLang, toText)
 import Data.Function (($))
 import Data.Function.Uncurried (Fn4, runFn4)
 import Data.Show (class Show, show)
@@ -31,5 +32,5 @@ renderToJson e a = runFn4 viz_internal (toText a) "json" (show e) 1
 renderToSvg :: ∀a. DotLang a => Engine -> a -> String
 renderToSvg e a = runFn4 viz_internal (toText a) "svg" (show e) 1
 
-renderToXDot :: ∀a. DotLang a => Engine → a → String 
+renderToXDot :: ∀a. DotLang a => Engine → a → String
 renderToXDot e a = runFn4 viz_internal (toText a) "xdot" (show e) 1
