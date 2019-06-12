@@ -17,6 +17,15 @@
   "author": "csicar",
   "license": "MIT",
   "dependencies": {
-    "viz.js": "^1.8.0"
-  }
+    "viz.js": "^1.8.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csicar/purescript-graphviz.git"
+  },
+  "bugs": {
+    "url": "https://github.com/csicar/purescript-graphviz/issues"
+  },
+  "homepage": "https://github.com/csicar/purescript-graphviz#readme"
 }

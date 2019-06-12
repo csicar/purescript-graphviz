@@ -18,3 +18,14 @@ let rendered = renderToSvg Dot g
 `rendered` will be:
 
 ![example image](example.svg)
+
+Development
+-----------
+
+### Running Tests
+
+```bash
+$ bower install
+$ npm install # for running tests in node
+$ pulp test
+```
